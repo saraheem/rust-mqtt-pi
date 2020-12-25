@@ -8,10 +8,15 @@ Rust MQTT Client for Raspberry PI
 2) `export PATH="~/foo/raspi/tools/arm-bcm2708/arm-rpi-4.9.3-linux-gnueabihf/bin:$PATH"`
 
 3) Edit your cargo config : 
+
    `sudo nano ~/.cargo/config`
+   
    Paste this into the file:
+   
    `[target.arm-uknown-linux-gnueabihf]`
+   
    `linker=arm-linux-gnueabihf-gcc`
+   
    Save file : Ctrl + O, Ctrl + X
    
 4) Add rust target for arm :
