@@ -123,9 +123,11 @@ async fn main() {
         format!(r#"{{"ClientId":"{}","StationId":4,"Status":0}}"#, CLIENT_ID),
     );
 
-    let mut mqttoptions = MqttOptions::new(CLIENT_ID, "broker.mqttdashboard.com", 1883);
+    // let mut mqttoptions = MqttOptions::new(CLIENT_ID, "broker.mqtt", 1883);
+    let mut mqttoptions = MqttOptions::new(CLIENT_ID, "10.227.141.211", 1883);
     mqttoptions.set_keep_alive(keep_alive_interval);
     mqttoptions.set_last_will(lwt);
+    mqttoptions.set_transport(rumqttc::Transport::Tcp);
 
     let (mut client, mut eventloop) = AsyncClient::new(mqttoptions, 20);
 

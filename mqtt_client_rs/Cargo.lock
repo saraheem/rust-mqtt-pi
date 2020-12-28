@@ -21,7 +21,7 @@ dependencies = [
  "futures-util",
  "log",
  "pin-project",
- "tokio 0.3.6",
+ "tokio",
  "tokio-rustls",
  "tungstenite",
  "webpki-roots",
@@ -39,7 +39,7 @@ dependencies = [
  "futures-task",
  "pharos",
  "rustc_version 0.2.3",
- "tokio 0.3.6",
+ "tokio",
 ]
 
 [[package]]
@@ -345,9 +345,9 @@ dependencies = [
 
 [[package]]
 name = "itoa"
-version = "0.4.6"
+version = "0.4.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dc6f3ad7b9d11a0c00842ff8de1b60ee58661048eb8049ed33c73594f359d7e6"
+checksum = "dd25036021b0de88a0aff6b850051563c6516d0bf53f8638938edbb9de732736"
 
 [[package]]
 name = "js-sys"
@@ -424,7 +424,16 @@ dependencies = [
 ]
 
 [[package]]
-name = "mqtt-client"
+name = "mqtt4bytes"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "15988061c9e6feb86fdb7cc01df1ede5a8bd765ebf9f085fe3f13751e6ea95af"
+dependencies = [
+ "bytes 0.6.0",
+]
+
+[[package]]
+name = "mqtt_client_rs"
 version = "0.1.0"
 dependencies = [
  "bytes 1.0.0",
@@ -432,16 +441,7 @@ dependencies = [
  "const_format",
  "rumqttc",
  "serde_json",
- "tokio 1.0.0",
-]
-
-[[package]]
-name = "mqtt4bytes"
-version = "0.4.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "15988061c9e6feb86fdb7cc01df1ede5a8bd765ebf9f085fe3f13751e6ea95af"
-dependencies = [
- "bytes 0.6.0",
+ "tokio",
 ]
 
 [[package]]
@@ -682,7 +682,7 @@ dependencies = [
  "mqtt4bytes",
  "pollster",
  "thiserror",
- "tokio 0.3.6",
+ "tokio",
  "tokio-rustls",
  "webpki",
  "ws_stream_tungstenite",
@@ -844,9 +844,9 @@ checksum = "6e63cff320ae2c57904679ba7cb63280a3dc4613885beafb148ee7bf9aa9042d"
 
 [[package]]
 name = "syn"
-version = "1.0.55"
+version = "1.0.56"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a571a711dddd09019ccc628e1b17fe87c59b09d513c06c026877aa708334f37a"
+checksum = "a9802ddde94170d186eeee5005b798d9c159fa970403f1be19976d0cfb939b72"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -855,18 +855,18 @@ dependencies = [
 
 [[package]]
 name = "thiserror"
-version = "1.0.22"
+version = "1.0.23"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0e9ae34b84616eedaaf1e9dd6026dbe00dcafa92aa0c8077cb69df1fcfe5e53e"
+checksum = "76cc616c6abf8c8928e2fdcc0dbfab37175edd8fb49a4641066ad1364fdab146"
 dependencies = [
  "thiserror-impl",
 ]
 
 [[package]]
 name = "thiserror-impl"
-version = "1.0.22"
+version = "1.0.23"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9ba20f23e85b10754cd195504aebf6a27e2e6cbe28c17778a0c930724628dd56"
+checksum = "9be73a2caec27583d0046ef3796c3794f868a5bc813db689eed00c7631275cd1"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -922,16 +922,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "tokio"
-version = "1.0.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9f4bfdcbd00fa893ac0549b38aa27080636a0104b0d0c38475a99439405e1df8"
-dependencies = [
- "autocfg",
- "pin-project-lite",
-]
-
-[[package]]
 name = "tokio-macros"
 version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -949,7 +939,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7ba3f045b4a15afc543ffe6e02bae7ecf372e89a0f9f8c4b15b13f0ceed4f105"
 dependencies = [
  "rustls",
- "tokio 0.3.6",
+ "tokio",
  "webpki",
 ]
 
@@ -1170,6 +1160,6 @@ dependencies = [
  "log",
  "pharos",
  "rustc_version 0.3.0",
- "tokio 0.3.6",
+ "tokio",
  "tungstenite",
 ]

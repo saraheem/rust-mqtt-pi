@@ -8,7 +8,7 @@ edition = "2018"
 
 [dependencies]
 rumqttc="*"
-tokio="*"
+tokio="0.3.6"
 bytes="*"
 const_format = "*"
 serde_json = "*"
