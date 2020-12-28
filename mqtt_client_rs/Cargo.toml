@@ -8,6 +8,7 @@ edition = "2018"
 
 [dependencies]
 rumqttc="*"
+# Tokio 1.0 introduced breaking changes for rumqttc
 tokio="0.3.6"
 bytes="*"
 const_format = "*"
